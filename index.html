@@ -15,6 +15,11 @@
   h1, h2, h3, h4 {
     font-family: 'Source Sans Pro', sans-serif;
   }
+  #schedule {
+    max-width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}
 </style>
 <title>CS 184 Final Project Proposal</title>
 <body>
@@ -23,13 +28,13 @@
 	<h2>Peijie Li, Sharon Li</h2>
 	<h2>3D fluids simulations and Snow Simulation</h2>
 </div>
-<div align = "center" width = "60%">
+<!-- <div align = "center" width = "60%"> -->
 	<p >In this final project, we would extend our interest in animination simulation and explore more about this interesting topic. From the lecture, we learned about particle simulation and grid-based simulation and hope to explore more. </p>
  <!-- </p> -->
-	<h3>A little bit about contexts related to class</h3>
+	<h3 align = "middle">A little bit about contexts related to class</h3>
 	<p> From my understanding, these simulations are similar to what we have in cloth simulation. We decompose the cloth fiber into huge numbers of point masses and combine forces and springs connecting point masses to simulate the relative movements caused between each points. However, particle-based simulation decomposes one object into smaller particles to simulate the movement for the shapeless object --- fluid, in this case via position-based simulation. This shoule be more interesting to apply particles to shape the fluids and to use position-based techniques to decide the position for the particles for next time step and further manipulate the particles, because the fluids is not of fixed shape and do not have strict restrications like the string in the cloth simulation. Therefore, we want to use particle simulation to mimic the movement of the shapeless fluids by predicting the positions for each points by performing numerical integration to compute each particle's change in position. In class we are introduced to a few ways of integrating our equations, including Euler's method (explicit and implicit), Verlet algorithm, Runge-Kutta method. We will further decide a best strategy in doing integration. In addition to fluid, we want to simulate the snow by applying both particle and grid system. We can compare the results and hopefully this should give us better understanding about the pros and cons of both representations.</p>
 	
-	<h3>Goal</h3>
+	<h3 align = "middle">Goal</h3>
 	<p>We would like to build a interactive system to play around with both simulation. </p>
 	<p>For the fluids simulation, we can provide interactive system with features like: </p>
 	<p>1) the weather master: applying winds, rains or flood to the scene (fluid) in order to either add external force to influence the direction of fluid movement, or increase/decrease the fluid flow and further influence the fluid movements directions/strength; </p>
@@ -40,14 +45,20 @@
 	<p>In the snow simulation, we want to create different scenes that contains different objects and environments and the user can shoot snow balls towards the scenes. We will aim to include features that let the user decide how they would like to throw the ball (the direction and the strength of the force he applies to the snow ball) and show the appropriate collision effects via gui manipulation.</p>
 
 	<p>Further idea regarding our fluid and snow simulation will be integrating both into one: simulate a snow ball thrown into a fluid. This is a more challenging practice but we will see if we are able to try it.</p>
-
-	<h3>Schedule</h3>
-	<p>Week 1 : Finalize all functions should be supported and all related sources: This including researching about possible formulas regarding fluid and snow simulation.</p>
-	<p>Week 2 : Starting formulating approaches and coding.</p>
-	<p>Week 3 : Debugging , testing for more demos/paramters, comparing/integrating these two simulations approaches, and formulating report. </p>
-	<p>Week 4 : finishing up websites. </p>
-	<h3>Resources</h3>
-
+	<div align = "center" id = "schedule">
+		<h3 align = "middle">Schedule</h3>
+		<p>Week 1 : Finalize all functions should be supported and all related sources: This including researching about possible formulas regarding fluid and snow simulation.</p>
+		<p>Week 2 : Starting formulating approaches and coding.</p>
+		<p>Week 3 : Debugging , testing for more demos/paramters, comparing/integrating these two simulations approaches, and formulating report. </p>
+		<p>Week 4 : finishing up websites. </p>
+	</div>
+	<div align = "center" id = "schedule">
+		<h3 align = "middle">Resources</h3>
+		<h4 align = "middle">3D fluids simulation</h4>
+		<p>1. <a href = "http://mmacklin.com/pbf_sig_preprint.pdf">Position Based Fluids paper </a></p>
+		<h4 align = "middle">Snow simulation</h4>
+		<p>1. <a href = "http://alexey.stomakhin.com/research/siggraph2013_snow.pdf">Snow simulation paper</a></p>
+	</div>
 
 <!-- Title, Summary and Team Members
 Provide us a descriptive title, 2-3 sentences that summarize your project, and list your two team members.
