@@ -22,18 +22,26 @@
 	<h1> CS184 final project proposal</h1>
 	<h2>Peijie Li, Sharon Li</h2>
 	<h2>3D fluids simulations and Snow Simulation</h2>
-	<p >In this final project, we would extend our interest in animination simulation and explore more about this interesting topic. From the lecture, we learned some about partical simulation and grid-based simulation and hope to explore more. </p>
+</div>
+	<p >In this final project, we would extend our interest in animination simulation and explore more about this interesting topic. From the lecture, we learned about particle simulation and grid-based simulation and hope to explore more. </p>
  <!-- </p> -->
 	<h3>A little bit about contexts related to class</h3>
-	<p> From my understanding, these simulations are similar to what we have about cloth simulation. We decompose the cloth fiber into huge numbers of point mass and combine forces and strings connecting point mass to simulate the contraction between each points. However, partical-based means that decomposes one object into smaller particals to simulate the movement for the shapeless object --- fluid, in this case via position-based simulation. This shoule be more interesting to apply particals to shape the fluids and use position-based technics to manipulate the particals, because the fluids is not fixed shape and does not have strict restrications like the string in the cloth simulation. Therefore, we want to use partical simulation to mimic the movement of the shapeless fluids through predicting the positions for each points. In addition to fluid, we want to simulate snow by applying both partical and grid system. This should give us better understanding about both and compare the behaviours.</p>
+	<p> From my understanding, these simulations are similar to what we have in cloth simulation. We decompose the cloth fiber into huge numbers of point masses and combine forces and strings connecting point masses to simulate the contraction between each points. (???)However, particle-based simulation decomposes one object into smaller particles to simulate the movement for the shapeless object --- fluid, in this case via position-based simulation. This shoule be more interesting to apply particles to shape the fluids and to use position-based techniques to decide the position for the particles for next time step and further manipulate the particles, because the fluids is not of fixed shape and do not have strict restrications like the string in the cloth simulation. Therefore, we want to use particle simulation to mimic the movement of the shapeless fluids by predicting the positions for each points by performing numerical integration to compute each particle's change in position. In class we are introduced to a few ways of integrating our equations, including Euler's method (explicit and implicit), Verlet algorithm, Runge-Kutta method. We will further decide a best strategy in doing integration. In addition to fluid, we want to simulate the snow by applying both particle and grid system. We can compare the results and hopefully this should give us better understanding about the pros and cons of both representations.</p>
 	
 	<h3>Goal</h3>
-	<p>We would like to build a interactive system to play around with both simulation. For the fluids simulation, we can provide interactive system to added external force like winds or motion applied on the gui to control the direction of movement we are expecting. In the snow simulation, we want to create different scenes containing different objects and environments and we can use gui to shoot snow balls towards the scenes with the user applies motion to control direction via the gui.</p>
-	<p>In the fluid simulation, we want to first achieve wave movement and then fluid falling down. With the fluid falling down, we want to create a simulation of raining within a scenes containig some objects and enviroment to show the collision with the scenes and the different absorbing/perserving of rains of on the groud of the enviroment. </p>
-	<!-- <p></p> -->
+	<p>We would like to build a interactive system to play around with both simulation. </p>
+	<p>For the fluids simulation, we can provide interactive system with features like: </p>
+	<p>1) the weather master: applying winds, rains, drys to the scene (fluid) in order to either add external force and influence the direction of fluid movement, or increase/decrease the fluid flow and further influence the fluid movements directions/strength; </p>
+	<p>2) the architect: placing/removing objects in the middle of the fluid and have the fluid flow reacts correspondingly. </p>
+
+	<p>In the fluid simulation, we want to first achieve wave movement and then fluid falling down. With the fluid falling down, we want to create a simulation of raining within a scenes to show the collisions within the scene, such as the water drops collides on the surface of the fluid and then becoming part of the fluid flow. </p>
+
+	<p>In the snow simulation, we want to create different scenes that contains different objects and environments and the user can shoot snow balls towards the scenes. We will aim to include features that let the user decide how they would like to throw the ball (the direction and the strength of the force he applies to the snow ball) and show the appropriate collision effects.</p>
+
+	<p>Further idea regarding our fluid and snow simulation will be integrating both into one: simulate a snow ball thrown into a fluid. This is a more challenging practice but we will see if we are able to try it.</p>
 
 	<h3>Schedule</h3>
-	<p>Week 1 : Finalize all functions should be supported and all related sources.</p>
+	<p>Week 1 : Finalize all functions should be supported and all related sources: This including researching about possible formulas regarding fluid and snow simulation.</p>
 	<p>Week 2 : Starting formulating approaches and coding.</p>
 	<p>Week 3 : Debugging , testing for more demos/paramters, comparing these two simulations, and formulating report. </p>
 	<p>Week 4 : finishing up websites. </p>
